@@ -39,7 +39,7 @@ class CreateRecipe extends Component {
             /><br />
 
 
-            <h1> Ingredients: </h1>
+            <h3> Ingredients: </h3>
             <h3> {recipe.ingredients.map((i, key) =>
               <input
                 type="text"
@@ -66,7 +66,7 @@ class CreateRecipe extends Component {
               onChange={(e) => updateRecipe(e)}
             /><br />
 
-            <h1> Prep Steps: </h1>
+            <h3> Prep Steps: </h3>
             <h3> {recipe.prep_steps.map((i, key) =>
               <input
                 type="text"
@@ -93,7 +93,7 @@ class CreateRecipe extends Component {
               onChange={(e) => updateRecipe(e)}
             /><br />
 
-            <h1> Cook Steps: </h1>
+            <h3> Cook Steps: </h3>
             <h3> {recipe.cook_steps.map((i, key) =>
               <input
                 type="text"
@@ -112,7 +112,7 @@ class CreateRecipe extends Component {
             > add Step </button> <br />
 
 
-            <h1> Finish Steps: </h1>
+            <h3> Finish Steps: </h3>
             <h3> {recipe.finish_steps.map((i, key) =>
               <input
                 type="text"
@@ -132,7 +132,7 @@ class CreateRecipe extends Component {
               }}
             > add Step </button> <br />
 
-            <h1> Tags: </h1>
+            <h3> Tags: </h3>
             <h3> {recipe.tags.map((i, key) =>
               <input
                 type="text"

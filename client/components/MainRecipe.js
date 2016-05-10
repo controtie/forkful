@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import actions from '../actions/index.js';
 import { forkRecipe } from '../utils/utils';
+import '../scss/_mainRecipe.scss';
 
 class MainRecipe extends Component {
   constructor(props) {
@@ -20,17 +21,21 @@ class MainRecipe extends Component {
 
           <div className="header">
             <h2 className="recipe-title">{recipe.title}</h2>
-            {recipe.images.map((image) => <img src={image} />)}
+            <div className="recipe-images">
+              {recipe.images.map((image) => <img src={image} />)}
+            </div>
             <h4>Servings: {recipe.yield + ' ' + recipe.yield_unit} </h4>
             <h4> tags: {recipe.tags.map(t => <a> {t} </a>)} </h4>
           </div>
 
           <div className="instructions">
 
-            <ul className="ingredients">
-            <h4> Ingredients </h4>
-            {recipe.ingredients.map((i) => <li> {i} </li>)}
-            </ul>
+            <div className="ingredients">
+              <ul>
+                <h4> Ingredients </h4>
+                {recipe.ingredients.map((i) => <li> {i} </li>)}
+              </ul>
+            </div>
 
             <div className="prep">
               <h4> Prep | Time: {recipe.prep_time} </h4>

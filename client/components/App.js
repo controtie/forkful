@@ -1,7 +1,8 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import actions from '../actions/index.js';
-// import '../scss/app.scss';
+import '../scss/simple-grid.scss';
+import '../scss/_app.scss';
 
 import Nav from './Nav.js';
 
@@ -9,7 +10,7 @@ class App extends Component {
   render() {
     const { children } = this.props;
     return (
-      <div>
+      <div className="grid grid-pad">
         <Nav />
         <div>{ children }</div>
       </div>
