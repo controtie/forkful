@@ -1,0 +1,29 @@
+.recipe-images > img {
+  width: 100%;
+  max-width: 250px;
+}
+
+.instructions {
+  display: flex;
+}
+
+.prep, .cook, .finish {
+  flex-grow: 1;
+  flex-basis: 30%;
+  padding: 10px;
+}
+
+.prep {
+  order: 1;
+}
+.cook {
+  order: 2;
+}
+.finish {
+  order: 3;
+}
+
+.ingredients {
+  order: 4;
+  flex-grow: 1;
+}
